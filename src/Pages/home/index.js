@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import TopFold from '../../Components/topBar'
 
 function Home() {
     return (
         <HomeContainer>
-            <HomeTopbar>
-                Topbar
-            </HomeTopbar>
+            <TopFold />
             <HomeContents>
                 Expenses
             </HomeContents>
@@ -18,8 +17,14 @@ function Home() {
 export default Home
 
 const HomeContainer = styled.div`
-`
-const HomeTopbar = styled.div`
+width: 50%;
+margin: auto;
+@media only screen and (max-width: 1024px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 512px) {
+    width: 100%;
+  }
 `
 const HomeContents = styled.div`
 `
