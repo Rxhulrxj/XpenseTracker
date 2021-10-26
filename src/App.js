@@ -13,7 +13,7 @@ function App() {
       </HeaderContainer>
       <Switch>
         <Route path="/" exact component={Home}/>
-        <Route path="/"  component={AddExpense}/>
+        <Route path="/add-expense"  component={AddExpense}/>
       </Switch>
       <FooterContainer>Footer</FooterContainer>
       </Router>

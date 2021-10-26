@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const TopFold = () => {
@@ -18,21 +19,28 @@ const TopFold = () => {
               onChange={(e) => handleQuery(e)}
             />
           </SearchBar>
+          <Link to="add-expense"
+          style={{ textDecoration: 'none' }}>
           <AddButton>
             <i className="fi fi-rr-add" />
             <label>Add</label>
           </AddButton>
+          </Link>
         </TopBarLeft>
       ) : (
         <AddTopFold>
+          <Link to="/"  style={{ textDecoration: 'none' }}>
             <AddTopFoldButton>
             <i class="fi fi-rr-undo"/>
             <label>Back</label>
             </AddTopFoldButton>
+            </Link>
+            <Link to="/"  style={{ textDecoration: 'none' }}>
             <AddTopFoldButton>
             <i class="fi fi-rr-cross-circle"/>
             <label>Cancel</label>
             </AddTopFoldButton>
+            </Link>
         </AddTopFold>
       )}
     </TopBarContainer>
@@ -52,6 +60,7 @@ const TopBarLeft = styled.div`
   display: flex;
   justify-content: space-between;
   flex: 1;
+  align-items: center;
 `;
 const SearchBar = styled.div`
   display: flex;
@@ -81,6 +90,8 @@ const AddButton = styled.div`
   padding: 0px 8px;
   cursor: pointer;
   transition: transform 0.4s;
+  text-decoration: none;
+  color: black;
   i {
     display: flex;
     align-items: center;
@@ -96,12 +107,16 @@ const AddTopFold = styled.div`
 display: flex;
 justify-content: space-between;
 flex: 1;
+text-decoration: none;
+
 `
 const AddTopFoldButton = styled.div`
 display: flex;
 align-items: center;
 font-size: 18px;
 cursor: pointer;
+text-decoration: none;
+color: black;
 >label {
     cursor: pointer;
     display: flex;
