@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ExpenseList from '../../Components/expense-list'
 import TopFold from '../../Components/topBar'
 
 function Home() {
@@ -7,9 +8,8 @@ function Home() {
         <HomeContainer>
             <TopFold />
             <HomeContents>
-                Expenses
-            </HomeContents>
-            
+                <ExpenseList />
+            </HomeContents>    
         </HomeContainer>
     )
 }
