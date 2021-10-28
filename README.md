@@ -1,3 +1,59 @@
+## Netflix-clone
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/).
+
+## Quick Links
+
+[Live Demo]()
+
+[Demo](#Demo)
+
+[Tech Stack](#tech-stack)
+
+[Author](#author)
+
+---
+
+## Demo
+
+Photo Demo
+
+![Screenshot (63)]
+
+
+## Tech Stack
+
+- [React](https://reactjs.org) 
+  - Create-react-app with highly complex frontend structure
+- [Redux](https://redux.js.org/) 
+  - State management and redux thunk for asynchronous api calls
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start) 
+  - Complex and dynamic route generation.
+
+
+
+## Implementation Highlights
+
+Xpense Tracker made with advanced react, redux & reacter-dom . Features include a  user can add and analyze their expenditure and after their use they can remove it.And the data is stored in this project using an 
+efficienct way using localstorage.
+
+### User Stories
+
+- Users can Add and Analyze their Expenditure.
+- Users can Delete their Expenditure after their use.
+
+### Current Plans for Expansion
+
+- Implement more features as a personal practice project
+- Adding Monthly Expenditure Calculation to the website
+- Adding more fun and cool things to have more interaction with the site to the user.
+
+---
+
+## Author
+
+- Rahul Raj N
+
+---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
