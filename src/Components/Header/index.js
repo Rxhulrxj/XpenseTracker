@@ -11,7 +11,7 @@ const HeaderSide = () => {
         </HeaderLogo>
         <HeaderButton>
           <a
-            href="/"
+            href="https://github.com/Rxhulrxj/XpenseTracker"
             target="_blank"
             rel="noopener noreferrer"
             title="Source File"
