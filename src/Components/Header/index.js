@@ -83,7 +83,7 @@ const HeaderButton = styled.div`
   border: 1px solid black;
   border-radius: 8px;
   padding: 0px 8px;
-  transition: transform .4s;
+  transition: transform .5s;
   opacity: 0.8;
   > a {
     text-decoration: none;

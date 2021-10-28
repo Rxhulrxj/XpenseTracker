@@ -1,13 +1,14 @@
 import {ADD_EXPENSE,DELETE_EXPENSE} from "../action-type/expenses"
 export const addExpense=(data) => {
+    console.log(data);
     return{
-        type: 'ADD_EXPENSE',
+        type: ADD_EXPENSE,
         data,
     };
 };
 export const deleteExpense=(data) => {
     return{
-    type: 'DELETE_EXPENSE',
+    type: DELETE_EXPENSE,
     data,
     }
 }

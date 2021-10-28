@@ -31,13 +31,13 @@ const TopFold = () => {
         <AddTopFold>
           <Link to="/"  style={{ textDecoration: 'none' }}>
             <AddTopFoldButton>
-            <i class="fi fi-rr-undo"/>
+            <i className="fi fi-rr-undo"/>
             <label>Back</label>
             </AddTopFoldButton>
             </Link>
             <Link to="/"  style={{ textDecoration: 'none' }}>
             <AddTopFoldButton>
-            <i class="fi fi-rr-cross-circle"/>
+            <i className="fi fi-rr-cross-circle"/>
             <label>Cancel</label>
             </AddTopFoldButton>
             </Link>
