@@ -4,7 +4,7 @@ import { Categories } from "../../Constants/addexpense";
 import { useDispatch } from "react-redux";
 import { addExpense } from "../../Redux/actions/expenses";
 import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { SuccessModal } from "./Successmodal";
 
 const AddForm = () => {
@@ -55,11 +55,9 @@ const AddForm = () => {
         newestOnTop={false}
         closeOnClick
         rtl={false}
-        pauseOnFocusLoss
         draggable
-        pauseOnHover
       />
-      <SuccessModal modalOpen={modalOpen} setModalOpen={setModalOpen}/>
+      <SuccessModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <FormItem>
         <label>title</label>
         <input
@@ -79,12 +77,9 @@ const AddForm = () => {
       </FormItem>
       <CategoryContainer>
         <Category>
-          <CategoryLabel>
+          <CategoryLabel onClick={() => setCategoryOpen(!categoryOpen)}>
             <label>{category ? category.title : "Category"}</label>
-            <i
-              className="fi fi-rr-angle-down"
-              onClick={() => setCategoryOpen(!categoryOpen)}
-            ></i>
+            <i className="fi fi-rr-angle-down"></i>
           </CategoryLabel>
           {categoryOpen && (
             <CategoryItems>
@@ -116,109 +111,108 @@ const AddForm = () => {
 
 export default AddForm;
 const AddFormContainer = styled.div`
-border-radius: 50px;
-background: linear-gradient(145deg, #66b8b6, #79dad8);
-box-shadow:  20px 20px 60px #60adac,
-             -20px -20px 60px #82ebe8;
-             
-margin:6px 12px;
-padding:24px;
-display: flex;
-flex-direction: column;
-flex: 1;
-min-height: 68vh;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #66b8b6, #79dad8);
+  box-shadow: 20px 20px 60px #60adac, -20px -20px 60px #82ebe8;
+
+  margin: 6px 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 68vh;
 `;
 const FormItem = styled.div`
-margin: 12px 0px;
-width: 70%;
-padding: 4px;
-border-radius: 6px;
-background-color: #fff; 
->label{
-  background-color: #8F9191;
-  padding: 2px 12px;
-  border-radius: 0px 4px 4px 0px;
-}
->input{
-  font-size:16px;
-  border: none;
-  outline: none;
+  margin: 12px 0px;
   width: 70%;
-  margin-left: 8px;
-}
-@media only screen and (max-width:1024px) {
-  width: 100%;
-  >input{
+  padding: 4px;
+  border-radius: 6px;
+  background-color: #fff;
+  > label {
+    background-color: #8f9191;
+    padding: 2px 12px;
+    border-radius: 0px 4px 4px 0px;
+  }
+  > input {
+    font-size: 16px;
+    border: none;
+    outline: none;
     width: 70%;
+    margin-left: 8px;
   }
-  .amountinput{
-    width: 50% !important;
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+    > input {
+      width: 70%;
+    }
+    .amountinput {
+      width: 50% !important;
+    }
   }
-}
 `;
 const CategoryContainer = styled.div`
-display: flex;
-flex-direction: column;
-flex:1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 `;
 const Category = styled.div`
-position: relative;
-width: 40%;
-@media only screen and (max-width:1024px){
-  width: 80%;
-}
+  position: relative;
+  width: 40%;
+  @media only screen and (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 const CategoryLabel = styled.div`
-display: flex;
-justify-content: space-between;
-background-color: #fff;
-border-radius: 6px;
-align-items: center;
-margin: 12px 0px;
-padding: 4px;
-> i{
   display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 6px;
   align-items: center;
-}
+  margin: 12px 0px;
+  padding: 4px;
+  > i {
+    display: flex;
+    align-items: center;
+  }
 `;
 const CategoryItems = styled.div`
-display: flex;
-position: absolute;
-width: 100%;
-flex-direction: column;
-background-color: #fff;
-border-radius: 6px;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 6px;
 `;
 const CatItem = styled.div`
-width: 98%;
-display: flex;
-justify-content:space-between;
-padding: 8px 0px;
-cursor: pointer;
-margin-left: 6px;
->img{
-  height: 32px;
-  margin-right: 20px;
-}
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0px;
+  cursor: pointer;
+  margin-left: 6px;
+  > img {
+    height: 32px;
+    margin-right: 20px;
+  }
 `;
 const FormAddButton = styled.div`
-display: flex;
-justify-content: flex-end;
->div{
   display: flex;
-  border: 1px solid #000;
-  padding:2px 8px;
-  border-radius:6px;
-}
->div>i{
-  display: flex;
-  align-items: center;
-  margin-left: 6px;
-  transition: transform .4s;
-  opacity: 0.8;
-}
-div:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
+  justify-content: flex-end;
+  > div {
+    display: flex;
+    border: 1px solid #000;
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+  > div > i {
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+    transition: transform 0.4s;
+    opacity: 0.8;
+  }
+  div:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
 `;

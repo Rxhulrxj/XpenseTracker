@@ -6,7 +6,7 @@ const HeaderSide = () => {
     <HeaderContainer>
       <Header>
         <HeaderLogo>
-          Xpense.
+          <span>X</span><span>p</span><span>e</span><span>n</span><span>s</span><span>e</span>.
           <i className="fi fi-rr-pulse" />
         </HeaderLogo>
         <HeaderButton>
@@ -48,7 +48,7 @@ const HeaderLogo = styled.div`
   align-items: center;
   font-size: 32px;
   font-weight: 500;
-  cursor: none;
+  cursor: pointer;
   > i {
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@ const HeaderLogo = styled.div`
   @media only screen and (max-width: 512px) {
     font-size: 24px;
   }
-  :hover{
+  span:hover{
     animation: rotate 1s linear;
   }
   @keyframes rotate {

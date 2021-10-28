@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import {useDispatch} from "react-redux";
+import {searchExpense} from '../../Redux/actions/expenses'
 
 const TopFold = () => {
   const [query, setQuery] = useState("");
+  const dispatch = useDispatch();
   const handleQuery = (e) => {
     setQuery(e.target.value);
+    dispatch(searchExpense(e.target.value));
   };
   return (
     <TopBarContainer>
