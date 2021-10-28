@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Quick Links
 
-[Live Demo]()
+[Live Demo](https://xpensetracker.pages.dev)
 
 [Demo](#Demo)
 
