@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import {useDispatch} from "react-redux";
-import {searchExpense} from '../../Redux/actions/expenses'
+import { useDispatch } from "react-redux";
+import { searchExpense } from "../../Redux/actions/expenses";
 
 const TopFold = () => {
   const [query, setQuery] = useState("");
@@ -23,28 +23,27 @@ const TopFold = () => {
               onChange={(e) => handleQuery(e)}
             />
           </SearchBar>
-          <Link to="add-expense"
-          style={{ textDecoration: 'none' }}>
-          <AddButton>
-            <i className="fi fi-rr-add" />
-            <label>Add</label>
-          </AddButton>
+          <Link to="add-expense" style={{ textDecoration: "none" }}>
+            <AddButton>
+              <i className="fi fi-rr-add" />
+              <label>Add</label>
+            </AddButton>
           </Link>
         </TopBarLeft>
       ) : (
         <AddTopFold>
-          <Link to="/"  style={{ textDecoration: 'none' }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <AddTopFoldButton>
-            <i className="fi fi-rr-undo"/>
-            <label>Back</label>
+              <i className="fi fi-rr-undo" />
+              <label>Back</label>
             </AddTopFoldButton>
-            </Link>
-            <Link to="/"  style={{ textDecoration: 'none' }}>
+          </Link>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <AddTopFoldButton>
-            <i className="fi fi-rr-cross-circle"/>
-            <label>Cancel</label>
+              <i className="fi fi-rr-cross-circle" />
+              <label>Cancel</label>
             </AddTopFoldButton>
-            </Link>
+          </Link>
         </AddTopFold>
       )}
     </TopBarContainer>
@@ -108,27 +107,26 @@ const AddButton = styled.div`
   }
 `;
 const AddTopFold = styled.div`
-display: flex;
-justify-content: space-between;
-flex: 1;
-text-decoration: none;
-
-`
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  text-decoration: none;
+`;
 const AddTopFoldButton = styled.div`
-display: flex;
-align-items: center;
-font-size: 18px;
-cursor: pointer;
-text-decoration: none;
-color: black;
->label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  > label {
     cursor: pointer;
     display: flex;
     align-items: center;
-}
-i{
+  }
+  i {
     display: flex;
     align-items: center;
     margin-right: 4px;
-}
-`
+  }
+`;

@@ -6,6 +6,7 @@ import { deleteExpense } from "../../Redux/actions/expenses";
 
 const Card = ({ item, notifySuccess }) => {
   const time = moment(item.createdAt).fromNow();
+  const dateofcreated = moment(item.createdAt).format("dddd, MMMM Do ,YYYY");
   const dispatch = useDispatch();
   const handleDelete = () => {
     dispatch(deleteExpense(item));
@@ -18,7 +19,9 @@ const Card = ({ item, notifySuccess }) => {
       </CardImageContainer>
       <CardInfo>
         <label className="card-title">{item.title}</label>
-        <label className="card-time">{time}</label>
+        <label className="card-time">
+          {time} | | <span>{dateofcreated}</span>
+        </label>
       </CardInfo>
       <CardRight>
         <div>
@@ -64,6 +67,9 @@ const CardInfo = styled.div`
   .card-time {
     color: gray;
     font-size: 12px;
+    > span {
+      color: #000;
+    }
   }
   @media only screen and (max-width: 1024px) {
     .card-title {
